@@ -16,6 +16,8 @@ Basic shopping list code
 11. Under endpoints choose “AWS Lambda Arn” and note your skill ID. You will need it when creating backend
 
 # Creating serverless backend for the skill
+
+## Creating Lambda function with sample Alexa skill code
 1. Login into your AWS account and make sure you’re in the Ireland region
 2. Go to Lambda service (Services->Lambda)
 3. Click “Create function”
@@ -23,12 +25,19 @@ Basic shopping list code
 5. Give your application a name and click “Deploy”
 6. Wait until deployment succeeds
 7. Click on “alexaskillskitnodejsfactskill” resource (It’s your Lambda function)
+
+## Linking Lambda to your Alexa skill
 8. Click on “Alexa Skills Kit” trigger and delete it.
 9. Click on “Add new trigger”, choose “Alexa Skills Kit” and use the skill ID that you got from Skill Builder
+
+## Giving Lambda access to DynamoDB (so that we can save shopping list between sessions)
 10. Click back on your lambda function, and click on “view role” under “Execution role” section
 11. Under “Permissions” click “Attach Policies” and search for “AmazonDynamoDBFullAccess”
 12. Select AmazonDynamoDBFullAccess policy and click “Attach Policy”
+
+## Coding the skill
 13. Go back to your lambda function and add code for the shopping mate skill. Check index.js if you need reference.
-14. Don’t forget to update your skill endpoint to point to your new lambda ARN
-15. Test your new Alexa Skill by going under “Test” section of Alexa Developer Console. You can use either voice or text for testing
-16. If something doesn’t work, you can debug your backend by going to “Monitoring” section of Lambda console and clicking “View Logs in CloudWatch”
+
+Don’t forget to update your skill endpoint to point to your new lambda ARN
+Test your new Alexa Skill by going under “Test” section of Alexa Developer Console. You can use either voice or text for testing
+If something doesn’t work, you can debug your backend by going to “Monitoring” section of Lambda console and clicking “View Logs in CloudWatch”
