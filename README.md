@@ -8,7 +8,7 @@ Basic shopping list code
 4. Under “Invocation” give your skills an invocation name, such as “shopping mate”
 5. Add new Intent, call it “AddIntent” and click “Create custom intent”
 6. Add a sample utterance “Add {item} to my shopping list”
-  - Add more utterances as you feel necessary
+    - Add more utterances as you feel necessary
 7. Choose type “AMAZON.food” under slot type to get a better voice recognition model
 8. Add another intent, “ListIntent”, for listing items on your shopping list
 9. Click “Save Model”, and then “Build Model”
